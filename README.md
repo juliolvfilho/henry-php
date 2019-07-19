@@ -1,7 +1,7 @@
-###Funções PHP para comunicação com catracas e relógios de acesso Henry&copy;
+### Funções PHP para comunicação com catracas e relógios de acesso Henry&copy;
 Testada com as APIs de comunicação dos modelos **Prime Acesso 8X** e **Prime Acesso SF**.
 
-#####Considerações Gerais
+##### Considerações Gerais
 1. Instancie um objeto dessa classe: definir o IP e a Porta
 2. Execute as operações (funções) disponíveis
 3. Há somente duas classes de operações disponíveis: Escutar ou Enviar Comando (mensagem).
@@ -10,12 +10,12 @@ Testada com as APIs de comunicação dos modelos **Prime Acesso 8X** e **Prime A
 6. Uma função da primeira categoria requer o parâmetro INDEX que é retornado numa resposta da função 'escutar'.
 7. Nas funções do segundo tipo você deve invocar 'escutar' após enviar o comando para que ele seja efetivado.
 
-#####Retorno das Funções
+##### Retorno das Funções
 As funções dessa classe geralmente apresentam os seguintes retornos:
 - Retornam STRING em caso de erro, contendo a mensagem de erro;
 - Diferente de STRING em caso de sucesso, geralmente algum valor vazio (ex.: false) ou objeto/array no caso da função retornar dados.
 
-#####Funções disponíveis
+##### Funções disponíveis
 
 | Nome | Descrição |
 | - | - |
@@ -28,7 +28,7 @@ As funções dessa classe geralmente apresentam os seguintes retornos:
 | `set_config` | Grava o valor de uma determinada configuração. <br/> Parâmetros: <br/> **parametro**: string contendo o nome da configuração - consulte a sessão 'Configurações' do manual do seu chip Henry&copy; para obter as configurações disponíveis. <br/> **valor**: string com o valor da configuração. |
 | `set_datetime` | Grava o valor do dia/hora atual no relógio da catraca. <br/> Parâmetros: <br/> **dia_hora**: string no formato dd/mm/YYYY H&#58;i&#58;s |
 
-#####Exemplo
+##### Exemplo
 
 ```php
 // sistema de garagem solicitando a abertura de uma cancela para passagem de veículo - chip Henry Argos

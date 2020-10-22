@@ -34,6 +34,7 @@ while (true) {
 		if( $resposta['err_or_version'] != '00' ){
 			echo "recebido o código de erro [".$resposta['err_or_version']."]\n";
 			echo "data: ".$resposta['data']."\n";
+			continue;
 		}
 		else{
 			//$params = explode(']', $resposta['data']); // tratamento da resposta recebida

@@ -21,8 +21,14 @@ while (true) {
 	echo "uma resposta foi recebida da catraca\n";
 
 	if( is_string($resposta) ){
-		echo "ERRO: $resposta";
-		die;
+		if ($resposta == "_TIMEOUT"){
+			echo "nenhuma resposta recebida da catraca\n";
+			continue;
+		}
+		else{
+			echo "ERRO: $resposta";
+			die;
+		}
 	}
 	elseif( is_array($resposta) ){
 		if( $resposta['err_or_version'] != '00' ){

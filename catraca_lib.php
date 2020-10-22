@@ -95,7 +95,7 @@ class Catraca
             $error = socket_last_error();
             @socket_close($this->socket);
             $this->socket = null; // em caso de falha, força a reconexão
-            if( $error == 11 ){
+            if( $error == 11 || $error == 10060 ){
                 return '_TIMEOUT_'; // retorno especial para este caso
             }
             else{

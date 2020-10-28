@@ -21,7 +21,7 @@ while (true) {
 	echo "uma resposta foi recebida da catraca\n";
 
 	if( is_string($resposta) ){
-		if ($resposta == "_TIMEOUT"){
+		if ($resposta == "_TIMEOUT_"){
 			echo "nenhuma resposta recebida da catraca\n";
 			continue;
 		}
